@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer')
 const fs = require('fs')
-const { TIMEOUT } = require('dns')
+// const { TIMEOUT } = require('dns')
 
 const componentArray = []
 let pageCount = 1
@@ -35,7 +35,7 @@ const sweepPage = async (page, browser) => {
     try {
       // page.waitForSelector('span[class="CurrencySizeLarge curprice"]')
       let price = await divProduct.$eval('span.CurrencySizeLarge', (element) =>
-        element.textContent.trim().replace('£', '')
+        parseFloat(element.textContent.trim().replace('£', ''))
       )
       const component = { img, title, description, price }
       componentArray.push(component)

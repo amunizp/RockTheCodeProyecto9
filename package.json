@@ -4,7 +4,8 @@
   "description": "scraping script",
   "main": "index.js",
   "scripts": {
-    "test": "node ./src/utils/scrapperLauncher.js"
+    "test": "node ./src/utils/scrapperLauncher.js",
+    "start": "node ./index.js"
   },
   "repository": {
     "type": "git",

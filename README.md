@@ -15,3 +15,13 @@ El scrapper debe pasar a la siguiente página hasta llegar al final y recoger to
 Debemos guardar el precio, el nombre y la imagen del producto
 Cuando se hayan recogido todos los datos de todas las páginas, se generará un archivo llamado products.json que aloje todos los datos recogidos
 En el package.json existirá un script que nos permita ejecutar el scrapper de manera sencilla
+
+## instructions
+
+Run `npm run test` to scrape the data from the website.
+later run `npm run start` to prepare to upload the data mongodb.
+use postman, insominia or other posting programe to do:
+`POST http://localhost:3000/api/v1/components/uploadComponents`
+
+no params or body needed.
+Confirm that it is uploaded on your atlas database.
